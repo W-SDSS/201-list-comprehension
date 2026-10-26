@@ -3,26 +3,15 @@
 # You can use the test functions with assertion statements to see if your code is working properly
 
 def getIntegers(myList):
-    # myList : expected list or tuple
-    # iterate through myList and add all the integers to the new list
-    integers = []
-
+    integers=[i for i in myList if isinstance(i, int)]
     return integers
 
 def getFactors(myList,number):
-    # myList : expected list or tuple
-    # number : integer
-    # iterate through the list and add the number to the list if
-    # it is a factor of the number
-    factors = []
-
+    factors = [i for i in myList if i>0 and i%number==0]
     return factors
 
 def getNegatives(myList):
-    # myList : expected list or tuple
-    # iterate through myList and add all the negative numbers to the new list
-    negatives = []
-
+    negatives = [i for i in myList if i<0]
     return negatives
 
 
