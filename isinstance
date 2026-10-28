@@ -1,0 +1,9 @@
+a = 3           # data type is integer
+b = 3.0         # data type is float
+
+3.0 is an integer even though it's a float data type
+
+is_instance(3) -> int
+is_instance(3.0) -> float
+
+

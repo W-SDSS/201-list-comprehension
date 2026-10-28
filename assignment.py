@@ -3,7 +3,7 @@
 # You can use the test functions with assertion statements to see if your code is working properly
 
 def getIntegers(myList):
-    integers=[i for i in myList if isinstance(i, int)]
+    integers=[i for i in myList if isinstance(i, int) or (i.is_integer and isinstance(i, float))]
     return integers
 
 def getFactors(myList,number):
@@ -16,7 +16,7 @@ def getNegatives(myList):
 
 
 def test1():
-  l1 = [x * .5 for x in range(20)]
+  l1 = [x * .5 for x in range(20)] 
   assert getIntegers(l1) == [i for i in range(10)]
   l2 = [x /3 for x in range(12)]
   assert getIntegers(l2) == [i for i in range(4)]
