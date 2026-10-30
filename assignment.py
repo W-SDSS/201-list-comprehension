@@ -3,17 +3,16 @@
 # You can use the test functions with assertion statements to see if your code is working properly
 
 def getIntegers(myList):
-    integers=[i for i in myList if isinstance(i, int) or (i.is_integer and isinstance(i, float))]
+    integers=[i for i in myList if isinstance(i, int) or isinstance(i, float) and i.is_integer()]
     return integers
 
 def getFactors(myList,number):
-    factors = [i for i in myList if i>0 and i%number==0]
+    factors = [i for i in myList if i>0 and number%i==0]
     return factors
 
 def getNegatives(myList):
     negatives = [i for i in myList if i<0]
     return negatives
-
 
 def test1():
   l1 = [x * .5 for x in range(20)] 
@@ -39,7 +38,6 @@ def main():
   test1()
   test2()
   test3()
-
 
 if __name__ == "__main__":
     main()
